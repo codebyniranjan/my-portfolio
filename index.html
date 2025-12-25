@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Techno-Noir</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_mobile.css">
+</head>
+<body>
+    
+    <!-- Background animated elements -->
+    <div class="bg-grid"></div>
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="bracket">[</span>
+                <span class="logo-text">PORTFOLIO</span>
+                <span class="bracket">]</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">00_about</a>
+                <a href="#certificates" class="nav-link">01_certs</a>
+                <a href="#experience" class="nav-link">02_exp</a>
+                <a href="#projects" class="nav-link">03_work</a>
+                <a href="#contact" class="nav-link">04_contact</a>
+            </div>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span class="status-text">ONLINE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Hamburger Menu -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <nav class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="mobile-nav-links">
+            <a href="#hero" class="mobile-nav-link">00_about</a>
+            <a href="#certificates" class="mobile-nav-link">01_certs</a>
+            <a href="#experience" class="mobile-nav-link">02_exp</a>
+            <a href="#projects" class="mobile-nav-link">03_work</a>
+            <a href="#contact" class="mobile-nav-link">04_contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Mouse Spotlight -->
+    <section id="hero" class="hero-section">
+        <!-- Spotlight element (follows mouse on desktop) -->
+        <div class="spotlight"></div>
+        
+        <div class="hero-content">
+            <div class="hero-grid">
+                <!-- Left side: Text content -->
+                <div class="hero-text">
+                    <div class="hero-label">
+                        <span class="typing-cursor">|</span>
+                        <span>INITIALIZING PROFILE...</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="glitch-text" data-text="NIRANJAN H">NIRANJAN H</span>
+                    </h1>
+                    
+                    <div class="hero-role">
+                        <span class="role-bracket">&lt;</span>
+                        <span class="role-text">Technology × Marketing × Business</span>
+                        <span class="role-bracket">/&gt;</span>
+                    </div>
+                    
+                    <div class="hero-bio">
+                        <p>
+                            I’m a Computer Science Engineering student driven by curiosity for how digital systems 
+                            work beneath the surface. I enjoy building interfaces and solutions that combine logic, 
+                            performance, and clarity.
+                        </p>
+                        <p>
+                            Alongside my technical work in cybersecurity, data science, and development, I’m also 
+                            deeply interested in marketing and entrepreneurship. I currently serve as the CMO of 
+                            CyberBee, where I work on strategy, branding, and growth initiatives.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">03+</span>
+                            <span class="stat-label">YEARS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">10+</span>
+                            <span class="stat-label">PROJECTS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value"> ∞</span>
+                            <span class="stat-label">LEARNING</span>
+                        </div>
+                    </div>
+                </div>
+
+              <div class="hero-image-container">
+    <div class="hero-image">
+        <img src="images/me.jpg" alt="Niranjan H" class="profile-photo">
+
+        <!-- Frame -->
+        <div class="image-frame"></div>
+
+        <!-- Scan line (IMAGE ONLY) -->
+        <div class="image-scanline"></div>
+    </div>
+    
+    <a href="resume/niranjan.res2.pdf"
+   target="_blank"
+   class="view-all-btn resume-btn">
+    <span class="btn-text">VIEW_MY_RESUME</span>
+    <span class="btn-arrow">→</span>
+</a>
+</div>
+                    <div class="image-frame"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">SCROLL_TO_EXPLORE</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="section-header">
+            <div class="section-number">01</div>
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                CERTIFICATIONS
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <!-- Auto-scrolling certificate rows -->
+        <div class="certificates-container">
+            <!-- Row 1: Scroll Left to Right -->
+            <div class="cert-row" data-direction="right">
+                <div class="cert-track">
+                    <!-- Add your certificates here - these will be duplicated for seamless loop -->
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/hub.png" alt="Certificate" class="cert-img">
+                            <!-- Replace with: <img src="path/to/cert1.jpg" alt="Certificate 1"> -->
+                        </div>
+                        <div class="cert-info">
+                            <h3>Digital Marketing</h3>
+                            <p>Hubspot Academy • 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/Adv eth hack.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Advanced Ethical Hacking</h3>
+                            <p>Techmaghi • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/be10x.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>AI Tools</h3>
+                            <p>Be10x • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/computer programming.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Computer Programming</h3>
+                            <p>University Of London • 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/devtown.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Appreciation</h3>
+                            <p>Devtown • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/career counselling.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Career Counselling</h3>
+                            <p>Elewayte • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/drishti.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>IOT</h3>
+                            <p>CET • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/ds with p.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Data Science</h3>
+                            <p>LetsUpgrade • 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row 2: Scroll Right to Left -->
+            <div class="cert-row" data-direction="left">
+                <div class="cert-track">
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/eccouncil1.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Dark Web</h3>
+                            <p>EC Council • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                           <img src="images/certificates/excel.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Microsoft Excel</h3>
+                            <p>Coursera • 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                           <img src="images/certificates/iedc 3d printing.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>3D Printing</h3>
+                            <p>IEDC • 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                           <img src="images/certificates/iedc green building.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Green Building</h3>
+                            <p>IEDC • 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                           <img src="images/certificates/iedc ideation.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Ideathon</h3>
+                            <p>IEDC • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                           <img src="images/certificates/yip.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Young Innovators Program</h3>
+                            <p>K-DISC • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/iedc ipr.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>IPR</h3>
+                            <p>IEDC • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/iedc surface degradation.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Surface Degradation</h3>
+                            <p>IEDC • 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row 3: Scroll Left to Right -->
+            <div class="cert-row" data-direction="right">
+                <div class="cert-track">
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/lupgrade.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Student Ambassador</h3>
+                            <p>LetsUpgrade • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/mailchimp.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Mailchimp</h3>
+                            <p>Coursera • 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/photoshop.jpg" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Photoshop</h3>
+                            <p>SAERIT • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/react.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>React</h3>
+                            <p>LetsUpgrade • 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/python.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Python</h3>
+                            <p>Google • 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/rspl.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Signal Processing</h3>
+                            <p>IEEE SB CEAL • 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-card">
+                        <div class="cert-image">
+                            <img src="images/certificates/smm.png" alt="Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Social Media Marketing</h3>
+                            <p>HP Foundation • 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="view-all-container">
+            <button class="view-all-btn" id="viewAllCerts">
+                <span class="btn-text">VIEW_ALL_CERTIFICATES</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Certificates Grid Modal -->
+    <div class="cert-modal" id="certModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">
+                <span class="close-line"></span>
+                <span class="close-line"></span>
+            </button>
+            <h2 class="modal-title">ALL_CERTIFICATIONS</h2>
+            <div class="cert-grid">
+                <!-- Certificates will be populated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-header">
+            <div class="section-number">02</div>
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                EXPERIENCE
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="timeline-container">
+            <!-- Timeline line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline items - Add your experience here -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2025 — PRESENT</div>
+                    <h3 class="timeline-title">Chief Marketing Officer</h3>
+                    <div class="timeline-company">Opsecbee LLP</div>
+                    <p class="timeline-desc">
+                        Driving marketing strategy and growth initiatives at Opsecbee.
+                        Specializing in branding, digital outreach, and customer acquisition.
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Marketing</span>
+                        <span class="tech-tag">Sales</span>
+                        <span class="tech-tag">HR</span>
+                        <span class="tech-tag">Documentation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2025</div>
+                    <h3 class="timeline-title">Content Curator</h3>
+                    <div class="timeline-company">IEEE SB MCET</div>
+                    <p class="timeline-desc">
+                        Curated and managed technical content for IEEE SB MCET.
+                        Focused on knowledge sharing, event communication, and community engagement.
+                    </p>
+                    <div class="timeline-tech">
+                           <span class="tech-tag">Content Strategy</span>
+                           <span class="tech-tag">Technical Writing</span>
+                           <span class="tech-tag">Community Engagement</span>
+                           <span class="tech-tag">Event Promotion</span>
+                           <span class="tech-tag">Brand Communication</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2024</div>
+                    <h3 class="timeline-title">Intern</h3>
+                    <div class="timeline-company">Prodigy Infotech</div>
+                    <p class="timeline-desc">
+                        Working on data-driven projects and analytical workflows.
+                        Gaining hands-on experience in data processing, visualization, and problem-solving.
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Problem Solving</span>
+                        <span class="tech-tag">Analytical Thinking</span>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+        <div class="timeline-date">2024</div>
+        <h3 class="timeline-title">Intern</h3>
+        <div class="timeline-company">Techmaghi</div>
+        <p class="timeline-desc">
+            Gained practical exposure to cybersecurity fundamentals and ethical hacking concepts.
+            Focused on security awareness, system analysis, and defensive practices.
+        </p>
+        <div class="timeline-tech">
+                <span class="tech-tag">Cybersecurity Basics</span>
+                <span class="tech-tag">Ethical Hacking</span>
+                <span class="tech-tag">Security Awareness</span>
+                <span class="tech-tag">System Analysis</span>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Projects Section - FAN/STACK LAYOUT -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <div class="section-number">03</div>
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                SELECTED_WORKS
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <!-- Fan/Stack Container -->
+        <div class="projects-fan-container" id="projectsFan">
+            <!-- Project Card 1 - Far Left -->
+            <div class="project-fan-card" data-project="1" data-position="0">
+                <div class="project-image">
+                    <img src="images/projectcards/esp1_cropped_processed_by_imagy.jpg" alt="Project 1">
+                    <!-- Replace with: <img src="path/to/project1.jpg" alt="Project 1"> -->
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3 class="project-title">ESP32 Tic Tac Toe Server</h3>
+                        <p class="project-desc">Real-time multiplayer game server on ESP32</p>
+                        <div class="project-tags">
+                                <span class="tag">ESP32</span>
+                                <span class="tag">WiFi</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 - Left -->
+            <div class="project-fan-card" data-project="2" data-position="1">
+                <div class="project-image">
+                    <img src="images/projectcards/esp32_project2.jpg" alt="Project 2">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3 class="project-title">ESP32 Web Chatroom</h3>
+                        <p class="project-desc">Browser-based chat system powered by ESP32</p>
+                        <div class="project-tags">
+                            <span class="tag">ESP32</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">Networking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3 - CENTER (Dominant) -->
+            <div class="project-fan-card" data-project="3" data-position="2">
+                <div class="project-image">
+                    <img src="images/projectcards/weather_forecast project.jpg" alt="Project 3">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-desc">Live weather dashboard using OpenWeather API</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">OpenWeather</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 4 - Right -->
+            <div class="project-fan-card" data-project="4" data-position="3">
+                <div class="project-image">
+                     <img src="images/projectcards/datascience_project.jpg" alt="Project 4">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3 class="project-title">Data Science Projects</h3>
+                        <p class="project-desc">EDA, ML models, and data visualization tasks</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 5 - Far Right -->
+            <div class="project-fan-card" data-project="5" data-position="4">
+                <div class="project-image">
+                    <img src="images/projectcards/portfolioproject.jpg" alt="Project 5">
+                </div>
+                <div class="project-overlay">
+                    <div class="project-info">
+                        <h3 class="project-title">Interactive Portfolio</h3>
+                        <p class="project-desc">Cyber-themed personal portfolio interface</p>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Animation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        <!-- Hidden Projects (Only for "View All" Grid) 
+    <div class="hidden-projects" style="display: none;">
+    
+    <div class="project-fan-card" data-project="6">
+        <div class="project-image">
+            <div class="project-placeholder">PROJECT_06</div>
+        </div>
+        <div class="project-overlay">
+            <div class="project-info">
+                <h3 class="project-title">Your Project</h3>
+                <p class="project-desc">Description</p>
+                <div class="project-tags">
+                    <span class="tag">Tech</span>
+                </div>
+            </div>
+        </div>
+    </div>
+     Add as many as you want! when copying copy the the entire section including the div below this line 
+</div> -->
+
+
+        <!-- View All Projects Button -->
+        <div class="view-all-container">
+            <button class="view-all-btn" id="viewAllProjects">
+                <span class="btn-text">VIEW_ALL_PROJECTS</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+    
+    <!-- Project Grid Modal (for View All) -->
+    <div class="project-grid-modal" id="projectGridModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeProjectGrid">
+                <span class="close-line"></span>
+                <span class="close-line"></span>
+            </button>
+            <h2 class="modal-title">ALL_PROJECTS</h2>
+            <div class="projects-grid-view">
+                <!-- Projects will be populated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="project-modal-content">
+            <button class="modal-close" id="closeProjectModal">
+                <span class="close-line"></span>
+                <span class="close-line"></span>
+            </button>
+            <div class="project-detail">
+                <!-- Content populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-bg-animation"></div>
+        
+        <div class="contact-content">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">
+                    <span class="title-bracket">[</span>
+                    GET_IN_TOUCH
+                    <span class="title-bracket">]</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="contact-text">
+                <p>Ready to collaborate on your next project?</p>
+                <p>Let's build something extraordinary together.</p>
+            </div>
+            
+            <div class="contact-methods">
+  <a href="mailto:codebyniranjan@gmail.com" class="contact-item">
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <div class="contact-details">
+      <span class="contact-label">EMAIL</span>
+      <span class="contact-value">codebyniranjan@gmail.com</span>
+    </div>
+  </a>
+
+
+
+                <a href="tel:+919074657313" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">PHONE</span>
+                        <span class="contact-value">+91 9074657313</span>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/codebyniranjan" target="_blank" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">GITHUB</span>
+                        <span class="contact-value">@codebyniranjan</span>
+                    </div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/codebyniranjan/" target="_blank" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">LINKEDIN</span>
+                        <span class="contact-value">/in/codebyniranjan</span>
+                    </div>
+                </a>
+                
+                <a href="https://www.instagram.com/heyitzniranjan/" target="_blank" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">INSTAGRAM</span>
+                        <span class="contact-value">@heyitzniranjan</span>
+                    </div>
+                </a>
+                
+                <a href="https://www.facebook.com/profile.php?id=100080999086959" target="_blank" class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <span class="contact-label">FACEBOOK</span>
+                        <span class="contact-value">@Niranjan H</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-line"></div>
+            <p class="footer-text">
+                <span class="bracket">[</span>
+                DESIGNED & DEVELOPED BY NIRANJAN H
+                <span class="bracket">]</span>
+                <span class="footer-year">2025</span>
+            </p>
+        </footer>
+    </section>
+
+    <!-- JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script_mobile.js"></script>
+    
+    <!-- Certificate Image Viewer -->
+    <div class="cert-image-viewer" id="certImageViewer">
+        <img id="viewerImage" src="" alt="Certificate">
+    </div>
+
+</body>
+</html>
