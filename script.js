@@ -540,10 +540,10 @@ function openProjectModal(projectId) {
             image: 'PROJECT_01'
         },
         '2': {
-            title: 'ESP32 Web Chatroom',
-            desc: 'Embedded web-based chat application',
-            tags: ['ESP32', 'WebSockets', 'HTML', 'Networking'],
-            details: 'A real-time chatroom served directly from an ESP32, allowing multiple users to communicate over a local network.',
+            title: 'Animosphere',
+            desc: 'Anime search and detailed discovery platform',
+            tags: ['Anime', 'API', 'Search', 'Frontend'],
+            details: 'Animosphere is a web platform that allows users to search for anime, explore detailed information, ratings, genres, and summaries through a clean and interactive interface.',
             image: 'PROJECT_02'
         },
         '3': {
@@ -569,10 +569,10 @@ function openProjectModal(projectId) {
         },
         // ✅ ADD YOUR NEW PROJECTS HERE (Examples below - Replace with your actual projects)
         '6': {
-            title: 'E-Commerce Platform',
-            desc: 'Full-stack shopping solution with payment integration',
-            tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-            details: 'A complete e-commerce platform with product management, shopping cart, secure checkout, and order tracking. Includes admin dashboard and customer reviews.',
+            title: 'ESP32 Web Chatroom',
+            desc: 'Embedded web-based chat application',
+            tags: ['ESP32', 'WebSockets', 'HTML', 'Networking'],
+            details: 'A real-time chatroom served directly from an ESP32, allowing multiple users to communicate over a local network.',
             image: 'PROJECT_06'
         },
         '7': {
